@@ -11,7 +11,7 @@ const { Navigator, Screen } = createStackNavigator();
 
 function RootNavigator() {
   return (
-    <Navigator initialRouteName={FOOTER}>
+    <Navigator initialRouteName={USER}>
       <Screen
         name={USER}
         component={UserStack}

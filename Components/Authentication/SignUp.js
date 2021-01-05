@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Screen Names
-import { HOME, LOGIN } from "../../Navigation/screenName";
+import { FOOTER, LOGIN } from "../../Navigation/screenName";
 
 // Styling Components
 import { TextInput, TouchableOpacity, View } from "react-native";
@@ -20,7 +20,7 @@ const Signup = ({ navigation }) => {
   const errors = useSelector((state) => state.errors.errors);
   const dispatch = useDispatch();
 
-  const goToMainList = () => navigation.navigate(HOME, { screen: HOME });
+  const goToMainList = () => navigation.navigate(FOOTER, { screen: FOOTER });
   return (
     <View style={styles.authContainer}>
       <Text style={styles.authTitle}>Signup</Text>

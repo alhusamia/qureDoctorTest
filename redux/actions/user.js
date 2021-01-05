@@ -44,12 +44,12 @@ export const login = (userData, redirect) => async (dispatch) => {
   }
 };
 
-export const signup = (userData) => async (dispatch) => {
+export const signup = (userData, redirect) => async (dispatch) => {
   try {
     const res = await instance.post("register/", userData);
     const { access } = res.data;
 
-    dispatch(login(userData));
+    dispatch(login(userData, redirect));
     // dispatch(setCurrentUser(access));
   } catch (error) {
     dispatch(setErrors(error.response.data));
